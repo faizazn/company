@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>I.R.S Technology</title>
+	 <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<style>
+		header {
+		 position: fixed;
+		 width: 100%;
+		 height: 8vh;
+		 top: 0;
+		 left: 0;
+		 background: #2c3e50;
+		 color: #fff;
+		 padding: 0 2rem;
+	}
+	
+	nav {
+		 width: 100%;
+		 height: 100%;
+		 display: flex;
+		 justify-content: space-between;
+		 align-items: center;
+	}
+	
+	.logo {
+		 font-size: 2rem;
+	}
+	
+	.toggle {
+		 display: none;
+	}
+	
+	.menu {
+		 display: flex;
+		 justify-content: space-between;
+		 align-items: center;
+		 list-style: none;
+		 width: 550px;
+	}
+	
+	.menu li a {
+		 color: #fff;
+		 font-weight: bold;
+		 padding: 15px;
+		 text-decoration: none;
+	}
+	.menu li a:hover{
+		color: #f30a2d; /* blue */
+		border-color: #f30a2d; /* blue */
+	}
+	@media all and (max-width: 991px) {
+	
+		 header {
+			  background: transparent;
+		 }
+	
+		 .toggle {
+			  display: block;
+			  font-size: 2rem;
+			  cursor: pointer;
+			  position: relative;
+			  z-index: 20;
+		 }
+	
+		 .logo {
+			  position: relative;
+			  z-index: 20;
+		 }
+	
+		 .ouvrir {
+			  display: block;
+		 }
+	
+		 .fermer {
+			  display: none;
+		 }
+	
+		 .open .ouvrir {
+			  display: none;
+		 }
+	
+		 .open .fermer {
+			  display: block;
+		 }
+	
+		 .menu {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100vh;
+			  background: #2c3e50;
+			  flex-direction: column;
+			  padding: 2rem;
+			  justify-content: space-around;
+			  transform: translateX(-100%);
+			  transition: transform 1s;
+		 }
+	
+		 .menu li a {
+			  font-size: 2rem;
+		 }
+		 .open .menu {
+			  transform: translateX(0);
+		 }
+		}
+		.diff_integration {
+	 max-width: 700px;
+	 margin: 0 auto;
+	 display: grid;
+	 grid-gap: 9rem;
+}
+
+.diff_integration .diff_integration_item {
+    width: 18%;
+	 padding: 1rem;
+	 height: 9rem;
+	 width: 15rem;
+}
+@media (min-width: 600px) {
+	.diff_integration { grid-template-columns: repeat(2, 1fr); }
+ }
+
+.diff_integration .diff_integration_item img {
+    width: 100%;
+	 height: 130px;
+    margin-bottom: 25px;
+}
+
+
+.diff_integration .diff_integration_item h4 {
+    color: #080808;
+    font-size: 14px;
+	 margin-bottom: 0px;
+}
+	</style>
+	<body>
+		<header>
+			<nav>
+				 <div class="logo">
+					  <img src="images/IRS_Horizontal.png" width="160px"; height="70px"">
+				 </div>
+				 <div class="toggle">
+					  <i class="fas fa-bars ouvrir"></i>
+					  <i class="fas fa-times fermer"></i>
+				 </div>
+				 <ul class="menu">
+					  <li><a href="index.html">Accuiel</a></li>
+					  <li><a href="index.html#services">Services</a></li>
+					  <li><a href="index.html#clients">Clients</a></li>
+					  <li><a href="index.html#part">Partenaires</a></li>
+					  <li><a href="index.html#contactus">Contact</a></li>
+					 
+				 </ul>
+			</nav>
+	  </header>
+	
+	<div class="part" id="part">
+		<h1 class="title">Integration Support et Maintenance</h2><br>
+		<p style="margin-top: 40px;margin-left: 260px;">Vos projets sont critiques avez-vous besoin d’une intégration et
+         installation garantie<br> dans les règles de l’art ?
+         Vos équipements sont votre production, ils sont critiques,<br> avez-vous
+         besoin d’un support à la mesure de vos exigences, qualifiés,
+         disponible<br> et réactif ?
+         Vous souhaitez être rassurer et bien accompagner lors de la mise<br> en
+         œuvre et l’exploitation de votre infrastructure IT ?</p>
+         <h2 style="text-decoration: underline; color: #f30a2d;">Nos Plus</h2><br>
+         <div class="integration">
+            <div class="diff_integration">
+               <div class="diff_integration_item">
+                  <img src="images/grad.jpg" alt="">
+                  <h4 class="sub_title">Des intervenants experts certifies
+                     par les constructeurs sur les
+                     différentes technologies du
+                     marché</h4><br>
+               </div>
+               <div class="diff_integration_item">
+                  <img src="images/serveur.png" alt="">
+                  <h4 class="sub_title">Maîtrise des différentes solutions
+                     IT: Serveurs, Stockage, réseaux,
+                     Cloud et sauvegarde</h4><br>
+               </div>
+               <div class="diff_integration_item">
+                  <img src="images/support.png" alt="">
+                  <h4 class="sub_title">Un support technique de qualité
+                     et à proximité</h4><br>
+               </div>
+               <div class="diff_integration_item">
+                  <img src="images/client.png" alt="">
+                  <h4 class="sub_title">Des moyens adaptables à la
+                     production et besoin du clien</h4><br>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+         <script src="jsfile.js"></script>
+
+         <div class="footer" style="margin-bottom: 0px;">
+            <a href="#">© 2022 I.R.S Technology</a>
+         </div>
+      
+      
+         
+      
+      </body>
+      </html>

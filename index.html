@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>I.R.S Technology</title>
+	 <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 550px;
+}
+
+.menu li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 15px;
+    text-decoration: none;
+}
+.menu li a:hover{
+	color: #f30a2d; /* blue */
+	border-color: #f30a2d; /* blue */
+}
+@media all and (max-width: 991px) {
+
+    header {
+        background: transparent;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 20;
+    }
+
+    .ouvrir {
+        display: block;
+    }
+
+    .fermer {
+        display: none;
+    }
+
+    .open .ouvrir {
+        display: none;
+    }
+
+    .open .fermer {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+    }
+	 .open .menu {
+        transform: translateX(0);
+    }
+	}
+</style>
+<body>
+	<header>
+		<nav>
+			 <div class="logo">
+				  <img src="images/IRS_Horizontal.png" width="160px"; height="70px">
+			 </div>
+			 <div class="toggle">
+				  <i class="fas fa-bars ouvrir"></i>
+				  <i class="fas fa-times fermer"></i>
+			 </div>
+			 <ul class="menu">
+				  <li><a href="#">Accuiel</a></li>
+				  <li><a href="#services">Services</a></li>
+				  <li><a href="#clients">Clients</a></li>
+				  <li><a href="#part">Partenaires</a></li>
+				  <li><a href="#contactus">Contact</a></li>
+				 
+			 </ul>
+		</nav>
+  </header>
+	
+    <div class="slider" >
+		<!-- fade css -->
+		<div class="myslide fade">
+			<div class="txt">
+				<p>Integration Support et Maintenance</p>
+			</div>
+			<img src="images/img2.jpg" style="width: 100%; height: 100%;">
+		</div>
+
+		<div class="myslide fade">
+			<div class="txt">
+				<p>Ventre de Materiels et Logiciel Informatique</p>
+			</div>
+			<img src="images/img1.jpg" style="width: 100%; height: 100%;">
+		</div>
+		
+		<div class="myslide fade">
+			<div class="txt">
+				<p>Telecom, Telephonie et Communication UNIFIEE</p>
+			</div>
+			<img src="images/img3.jpg" style="width: 100%; height: 100%;">
+		</div>
+
+		<div class="myslide fade">
+			<div class="txt">
+				<p>Video Surveillances, Sécurité et Equipements des Sales Technique</p>
+			</div>
+			<img src="images/imlg4.png" style="width: 100%; height: 100%;">
+		</div>
+		
+		<!-- /fade css -->
+		
+		<!-- onclick js -->
+		
+		<div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+		<!-- /onclick js -->
+	</div>
+	
+	<div class="services" id="services">
+		<h1 class="title">Nos Services</h1>
+		<div class="diff_services">
+			<div class="diff_services_item">
+				<img src="images/telecom.jpg" alt="service_image">
+				<h4 class="sub_title">Telecom, Telephonie et Communication UNIFIEE</h4><br>
+				<a href="telecom.html">Plus d'information</a>
+			</div>
+			<div class="diff_services_item">
+				<img src="images/logiciel.jpg" alt="service_image">
+				<h4 class="sub_title">Ventre de Materiels et Logiciel Informatique</h4><br>
+				<a href="ventre.html">Plus d'information</a>
+			</div>
+			<div class="diff_services_item">
+				<img src="images/integration.jpg" alt="service_image">
+				<h4 class="sub_title">Integration Support et Maintenance</h4><br>
+				<a href="integration.html">Plus d'information</a>
+			</div>
+			<div class="diff_services_item">
+				<img src="images/video.jpg" alt="service_image">
+				<h4 class="sub_title">Video Surveillances, Sécurité et Equipements des Sales Technique</h4><br>
+			   <a href="video.html">Plus d'information</a>
+			</div>
+			<div class="diff_services_item">
+				<img src="images/auditt.jpg" alt="service_image">
+				<h4 class="sub_title">Audit et Conseils</h4><br>
+			   <a href="audit.html">Plus d'information</a>
+			</div>
+			<div class="diff_services_item">
+				<img src="images/dev.jpg" alt="service_image">
+				<h4 class="sub_title">Développement Informatique</h4><br>
+			   <a href="">Plus d'information</a>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="clients" id="clients">
+		<h1 class="title">Nos Clients / Références</h1><br><br>
+		<div class="diff_client">
+			<div class="diff_client_item">
+				<img src="images/download.png" alt="">
+			</div>
+			<div class="diff_client_item">
+				<img src="images/fh2mre.png" alt="">
+			</div>
+			<div class="diff_client_item">
+				<img src="images/logo-5.png" alt="">
+			</div>
+			<div class="diff_client_item">
+				<img src="images/Logo_DGSS_200.png" alt="">
+			</div>
+			<div class="diff_client_item">
+				<img src="images/logo.jpg" alt="">
+			</div>
+			<div class="diff_client_item">
+				<img src="images/Pactilis-def.png" alt="">
+			</div>
+			<div class="diff_client_item">
+				<img src="images/selecOtial.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="part" id="part">
+		<h1 class="title">Nos Partenaires</h1>
+		<p class="partn">Afin de mieux vous accompagner , nous disposons de partenariats signés avec les constructeurs et distributeurs leaders du marché. </p>
+		<div class="diff_part">
+			<div class="diff_part_item">
+				<img src="images/ingram.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/config.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/microsoft.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/dell.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/solution.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/fortinet.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/veritas.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/sophos.PNG" alt="">
+			</div>
+			<div class="diff_part_item">
+				<img src="images/disway.PNG" alt="">
+			</div>
+		</div>
+	</div>	
+	<div class="contactus" id="contactus">
+		<center><h1 class="title" style="margin-bottom: -7px;">Contactez nous</h1></center>
+		<div class="container">
+			<div class="form-sections">
+			  <!-- Form left -->
+			  <div class="Form-left">
+				 
+				 <br><br>
+	  
+				 <!--first Heading -->
+				 <h4>Adresse</h4>
+				  <span>N 23 BIS, Av Sidi Med Hay Errachad KOM - Salé</span>
+				  <hr><br><br>
+	  
+				  <!--second Heading -->
+				 <h4>Téléphone</h4>
+				  <span>(+212) 06 01 12345 0<br>(+212) 06 00 588 092</span>
+				  <hr><br><br>
+
+				  <h4>Site</h4>
+				  <span>www.irs.ma</span>
+				  <hr><br><br>
+	  
+				<!--third Heading -->
+				 <h4>EmailL</h4>
+				  <span>contact@irs.ma</span>
+				  <hr> <br>
+			  </div>
+	  
+			  <!-- form right -->
+			  <div class="Form-right">
+				 
+				
+				 <!-- form -->
+				 <form action="">
+					<h5>Votre Nom</h5>
+					<input type="text" placeholder="Votre Nom"><br><br>
+					<h5>Email</h5>
+					<input type="email"><br><br>
+					<h5>Téléphone</h5>
+					<input type="number"><br><br>
+					<h5>Nom de la société</h5>
+					<input type="text"><br><br>
+					<h5>Message</h5>
+					<textarea name="" id="" cols="50" rows="7"></textarea><br>
+					<button>Envoyer</button>
+				 </form>
+			  </div>
+			</div>
+			</div>
+	</div>
+	<!-- onclick js -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+ 
+ 
+ <!-- /onclick js -->
+</div>
+
+<script src="jsfile.js"></script>
+
+	<div class="footer">
+		<a href="#">© 2022 I.R.S Technology</a>
+	</div>
+
+
+	<div class="arrow">
+		<a href="#home"><img src="images/arrow.png" alt="up_arrow"></a>
+	</div>
+</div>	
+<script src="toggle.js"></script>
+</body>
+</html>
